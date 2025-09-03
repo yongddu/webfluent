@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        vertical-align: top;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <figure>
+        <picture>
+          <source media="(max-width: 500px)" srcset="./img/blackpink-one.jpg" />
+          <source media="(max-width: 1000px)" srcset="./img/blackpink-two.jpg">
+          <img src="./img/blackpink.jpg" alt="" />
+        </picture>
+      </figure>
+    </div>
+  </body>
+</html>
