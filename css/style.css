@@ -2,86 +2,267 @@
 
 .hero {
   height: 46rem;
-  position: relative; 
+  position: relative;
   overflow: hidden;
 }
 
 .hero::before {
-    content: '';
-    color: #000;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* inset: 0; */
-    background: rgba(255,255,255,0.4);
-    z-index: 1;
+  content: "";
+  color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* inset: 0; */
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 1;
 }
 
 .hero figure {
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: reveal-ani 1s ease-in-out;
-    /* border: 5px solid #f00; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: reveal-ani 1s ease-in-out;
+  /* border: 5px solid #f00; */
 }
 
 .hero img {
   object-position: 50% 60%;
 }
 .hero .inner {
-    height: 100%;
-    position: relative;
-    z-index: 2;
+  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .visual-title {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    /* background: #f00; */
-    width: 69rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  /* background: #f00; */
+  width: 69rem;
 }
 
-
-
-.visual-title h2{
-    font-weight: 700;
-    font-size: 4.8rem;
-    line-height: 1.2;
-    text-transform: uppercase;
-    animation: slide-in 2s 1.5s ease-in-out backwards ;
+.visual-title h2 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  animation: slide-in 2s 1.5s ease-in-out backwards;
 }
 .visual-title h2 strong {
-    color: var(--main-color);
+  color: var(--main-color);
 }
-.visual-title p{
-font-weight: 500;
-font-size: 2rem;
-margin-top: 2.4rem;
-animation: slide-in 2s 1.7s ease-in-out backwards ;
+.visual-title p {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: 2.4rem;
+  animation: slide-in 2s 1.7s ease-in-out backwards;
 }
-.visual-title .cta{
-display: flex;
-justify-content: center;
-align-items: center;
-animation: slide-in 2s 1.9s ease-in-out backwards ;
+.visual-title .cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slide-in 2s 1.9s ease-in-out backwards;
 
-width: 20rem;
-height: 4.8rem;
-background: var(--main-color);
-color: #fff;
-font-weight: 700;
-font-size: 1.6rem;
-line-height: 1.5;
+  width: 20rem;
+  height: 4.8rem;
+  background: var(--main-color);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.5;
 
-margin-top: 3.2rem;
-
+  margin-top: 3.2rem;
 }
 
-visual-title .cta:hover{
-    background: var(--main-dark);
-    color: #fff;
+visual-title .cta:hover {
+  background: var(--main-dark);
+  color: #fff;
+}
+/* main 하위 섹션 전체 적용(hero제외) : 2025. 09. 04. 권용선  */
+/* 사업소개 */
+main > section + section {
+  padding: 9rem 0 3rem;
+}
+
+main > section:last-child {
+  padding-bottom: 12rem;
+}
+.business-list {
+  display: flex;
+  gap: 2rem;
+}
+.business-list li {
+  /* flex: 1 1 30%; */
+  border: 1px solid var(--black30);
+  width: 28rem;
+  height: 30.2rem;
+  padding: 2.8rem 3.2rem;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.05);
+}
+
+.business-list li dl dt {
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 2rem;
+  color: var(--main-dark);
+}
+.business-list li dl dd {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-top: 1.2rem;
+}
+.business-list li dl dd:first-of-typ {
+  display: block;
+  margin-top: 2rem;
+}
+/*                    */
+.works h3 {
+  font-size: 3.2rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.sec-title + p {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.works-list {
+  margin-top: 2.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 50%;
+  position: relative;
+}
+
+.works-list li {
+  overflow: hidden;
+}
+.works-list li a {
+  position: relative;
+}
+
+.works-list li a p strong {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.works-list li a p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  margin-top: 6px;
+}
+.works-list li figure {
+  transition: 0.4s;
+}
+.works-list li:hover figure {
+  transform: scale(1.3);
+  filter: blur(10px);
+}
+
+.news {
+  margin-top: 5.1rem;
+}
+.news-con {
+  display: flex;
+  gap: 6rem;
+}
+.news-text {
+  display: block;
+  width: 48rem;
+}
+
+.news h3 {
+  font-size: 3.2rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--main-color);
+}
+.news h4 {
+  margin-top: 1.8rem;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+.news p {
+  margin-top: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.7;
+  width: 48rem;
+}
+
+/* column 시작!!!!!!!!@@@@@ */
+
+.column h4 {
+  font-size: 2.8rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--main-color);
+}
+
+.column h5 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 1.8rem;
+}
+.column h5 + p {
+  margin-top: 18px;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 400;
+  column-count: 2;
+  column-gap: 4rem;
+  text-align: justify;
+}
+
+.column p + p {
+  margin-top: 3rem;
+  text-align: right;
+}
+.column p + p strong {
+  display: block;
+  font-weight: 700;
+}
+
+.footer {
+  background: #333;
+  padding: 5.2rem 0;
+}
+
+.foot-con {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.foot-text {
+    font-weight: 700;
+    color: var(--white60);
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.foot-text p + p {
+  margin-top: 0.8rem;
 }
