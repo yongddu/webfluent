@@ -245,24 +245,3 @@ main > section:last-child {
   font-weight: 700;
 }
 
-.footer {
-  background: #333;
-  padding: 5.2rem 0;
-}
-
-.foot-con {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
-}
-
-.foot-text {
-    font-weight: 700;
-    color: var(--white60);
-  font-size: 1.4rem;
-  line-height: 1.5;
-}
-
-.foot-text p + p {
-  margin-top: 0.8rem;
-}

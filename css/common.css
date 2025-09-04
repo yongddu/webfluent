@@ -71,6 +71,7 @@ body {
   min-width: 320px;
 }
 
+/* 공통 레이아웃 */
 .inner {
   width: 118rem;
   margin: 0 auto;
@@ -100,6 +101,29 @@ body {
 .btn-menu {
   display: none;
 }
+.footer {
+  background: #333;
+  padding: 5.2rem 0;
+}
+
+.foot-con {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.foot-text {
+    font-weight: 700;
+    color: var(--white60);
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.foot-text p + p {
+  margin-top: 0.8rem;
+}
+
+/* 애니메이션 정의 */
 
 @keyframes reveal-ani {
   0% {
@@ -111,6 +135,8 @@ body {
     transform: scale(1);
   }
 }
+
+
 
 @keyframes slide-in {
   0% {
